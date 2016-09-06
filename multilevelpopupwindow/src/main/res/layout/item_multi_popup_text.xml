@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="40dp">
+
+    <LinearLayout
+        android:id="@+id/parent_check"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:visibility="invisible">
+
+        <View
+            android:layout_width="6dp"
+            android:layout_height="40dp"
+            android:background="#00B2EE" />
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="#ddd" />
+    </LinearLayout>
+
+    <CheckedTextView
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="start|center_vertical"
+        android:paddingRight="10dp"
+        android:textColor="@drawable/color_black_blue"
+        android:textSize="14sp" />
+</LinearLayout>

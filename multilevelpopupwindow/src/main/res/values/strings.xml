@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">MultilevelPopupWindow</string>
+    <string name="unlimited_categories">不限类别</string>
+    <string name="unlimited_child_categories">不限子类别</string>
+</resources>
