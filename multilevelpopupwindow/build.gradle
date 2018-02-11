@@ -1,8 +1,11 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.novoda.bintray-release'
+//apply plugin: 'com.github.dcendents.android-maven'
+//apply plugin: 'com.jfrog.bintray'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "24.0.0"
+    buildToolsVersion "25.0.0"
 
     defaultConfig {
         minSdkVersion 14
@@ -23,3 +26,108 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:24.0.0'
 }
+
+publish {
+    userOrg = 'shaou'//bintray.com用户名
+    groupId = 'com.shaou'//jcenter上的路径
+    artifactId = 'MultilevelPopupWindow'//项目名称
+    publishVersion = '1.0.0'//版本号
+    desc = 'A view that guarantees a certain percentage of width and height'//描述，不重要
+    website = 'https://github.com/ShaouCN/MultilevelPopupWindowSample'//网站，不重要；尽量模拟github上的地址，例如我这样的；当然你有地址最好了
+}
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+//apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
+
+//version = "1.0.2"
+//// 项目的主页
+//def siteUrl = 'https://github.com/ShaouCN/MultilevelPopupWindowSample'
+//// Git仓库的url
+//def gitUrl = 'https://github.com/ShaouCN/MultilevelPopupWindowSample.git'
+//// Maven Group ID for the artifact，一般填你唯一的包名
+//group = "com.xzy.multilevelpopupwindowsample"
+//install {
+//    repositories.mavenInstaller {        // This generates POM.xml with proper parameters
+//        pom {
+//            project {
+//                packaging 'aar'
+//                // Add your description here
+//                name 'Android PopupWindow widget'     //项目描述
+//                url siteUrl                // Set your license
+//                licenses {
+//                    license {
+//                        name 'The Apache Software License, Version 2.0'
+//                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//                    }
+//                }
+//                developers {
+//                    developer {
+//                        id 'shauo'        //填写的一些基本信息
+//                        name 'shaou'
+//                        email 'shaouXie@icloud.com'
+//                    }
+//                }
+//                scm {
+//                    connection gitUrl
+//                    developerConnection gitUrl
+//                    url siteUrl
+//                }
+//            }
+//        }
+//    }
+//}
+//task sourcesJar(type: Jar) {
+//    from android.sourceSets.main.java.srcDirs
+//    classifier = 'sources'
+//}
+//task javadoc(type: Javadoc) {
+//    source = android.sourceSets.main.java.srcDirs
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//}
+//task javadocJar(type: Jar, dependsOn: javadoc) {
+//    classifier = 'javadoc'
+//    from javadoc.destinationDir
+//}
+//artifacts {
+//    archives javadocJar
+//    archives sourcesJar
+//}
+//Properties properties = new Properties()
+//properties.load(project.rootProject.file('local.properties').newDataInputStream())
+//bintray {
+//    user = properties.getProperty("bintray.user")
+//    key = properties.getProperty("bintray.apikey")
+//    configurations = ['archives']
+//    pkg {
+//        userOrg = "shaouxie"//JCenter上创建的的Organization
+//        repo = "maven"//你要上传的库的名字
+//        name = "MultiLevelPopupWindow"    //发布到JCenter上的项目名字
+//        websiteUrl = siteUrl
+//        vcsUrl = gitUrl
+//        licenses = ["Apache-2.0"]
+//        publish = true
+//    }
+//}
+
+//ext {
+//    bintrayRepo = 'maven'
+//    bintrayName = 'ml-popup'
+//
+//    publishedGroupId = 'com.xzy'
+//    libraryName = 'MultilevelPopupWindow'
+//    artifact = 'ml-popup'
+//
+//    libraryDescription = 'A multilevel popupWindow on Android'
+//
+//    siteUrl = 'https://github.com/ShaouCN/MultilevelPopupWindowSample'
+//    gitUrl = 'https://github.com/ShaouCN/MultilevelPopupWindowSample.git'
+//
+//    libraryVersion = '1.0.0'
+//
+//    developerId = 'shaou'
+//    developerName = 'shaouXie'
+//    developerEmail = 'shaouxie@icloud.com'
+//
+//    licenseName = 'The Apache Software License, Version 2.0'
+//    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+//    allLicenses = ["Apache-2.0"]
+//}
