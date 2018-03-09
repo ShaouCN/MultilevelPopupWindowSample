@@ -5,3 +5,6 @@
 popupWindowMulti = new MultilevelPopupWindow(this, true, 2, shadowView);</br>
 popupWindowMulti.setListAndRefresh(MultilevelUtil.getMultiList(mTypeList));</br>
 popupWindowMulti.showAsDropDown(btn, 0, 0);
+
+Gradle:
+compile 'com.shaou:MultilevelPopupWindow:1.0.0'
